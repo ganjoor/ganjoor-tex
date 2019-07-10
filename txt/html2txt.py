@@ -32,8 +32,12 @@ content = inf.read().split("\n")
 for line in content:
     if line[0:3] == "<p>": 
         line1 = line.split('>')[1]
+        if (not "\"" in line1) or (not "/" in line1):
+            continue
         outurl = line1.split("\"")[1]
-        outname = line1.split("/")[6]
+        outurllist = outurl.split("/")
+        outurllist = filter(None, outurllist)
+        outname = outurllist[len(outurllist)-1]
         if (len(outname)==3):
             outname = "sh00" + outname[2:3]
         if (len(outname)==4):
