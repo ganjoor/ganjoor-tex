@@ -1,0 +1,69 @@
+#!/usr/bin/env python
+
+import sys
+import os
+
+def writefile(textpath, texpath, fname):
+    name = fname.split(".")[0]
+    inf = open(textpath+'/'+fname)
+    outf = open(texpath+'/'+name+".tex", "w")
+    lines = inf.readlines()
+    title = lines.pop(0).split('\n')[0]
+    print(title)
+
+    outf.write("\\begin{center}\n")
+    outf.write("\\section*{"+title+"}\n")
+    outf.write("\\label{sec:"+name+"}\n")
+    outf.write("\\addcontentsline{toc}{section}{\\nameref{sec:"+name+"}}\n")
+    outf.write("\\begin{longtable}{l p{0.5cm} r}\n")
+    
+    verse = 1
+    for line in lines:
+        if line == "" or line == "\n":
+            continue
+        outf.write(line)
+        if verse == 1:
+            outf.write("&&\n")
+            verse = 2
+            continue
+        if verse == 2:
+            outf.write("\\\\\n")
+            verse = 1
+            continue
+    outf.write("\\end{longtable}\n")
+    outf.write("\\end{center}\n")
+    inf.close()
+    outf.close()
+
+if len(sys.argv) < 3 :
+    print "usage:", sys.argv[0], "<txt directory> <tex directory>"
+    sys.exit(0)
+
+files = os.listdir(sys.argv[1])
+
+texpath = sys.argv[2]
+if texpath[len(texpath)-1] == '/':
+    texpath = texpath[:-1]
+
+texf = open(texpath+'.tex', 'w')
+texpathlist = texpath.split('/')
+
+texf.write("\\documentclass[14pt,b5paper]{article}\n")
+texf.write("\\input{header}\n")
+texf.write("\\begin{document}\n")
+texf.write("\\title{\Huge }\n")
+texf.write("\\author{ }\n")
+texf.write("\\date{ }\n")
+texf.write("\\maketitle\n")
+texf.write("\\newpage\n")
+texf.write("\\tableofcontents\n")
+texf.write("\\newpage\n")
+
+for fname in sorted(files):
+    writefile(sys.argv[1], texpath, fname)
+    texf.write("\\input{"+texpathlist[len(texpathlist)-1]+'/'+fname.split('.')[0]+"}\n")
+    texf.write("\\newpage\n")
+
+texf.write("\\end{document}\n")
+
+texf.close()
