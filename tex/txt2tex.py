@@ -36,7 +36,7 @@ def writefile(textpath, texpath, fname):
     outf.close()
 
 if len(sys.argv) < 3 :
-    print "usage:", sys.argv[0], "<txt directory> <tex directory>"
+    print("usage: "+sys.argv[0]+" <txt directory> <tex directory>")
     sys.exit(0)
 
 files = os.listdir(sys.argv[1])

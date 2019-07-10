@@ -18,7 +18,7 @@ def writefile(outname, title, outurl, outpath):
     outf.close()
 
 if len(sys.argv) < 3 :
-    print "usage:", sys.argv[0], "<ganjoor link> <text directory>"
+    print("usage: "+sys.argv[0]+" <ganjoor link> <text directory>")
     sys.exit(0)
 
 url = sys.argv[1].split('/')
