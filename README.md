@@ -34,10 +34,10 @@ usage:   xelatex <tex file>
 example: xelatex daftar1.tex
 ```
 
-The [Persian fonts](https://github.com/ganjeeneh/persian-fonts-linux) must have been installed before compiling the TeX files.
+The [Persian fonts](https://github.com/ganjoor/persian-fonts-linux) must have been installed before compiling the TeX files.
 
 ```
-git clone https://github.com/ganjeeneh/persian-fonts-linux.git
+git clone https://github.com/ganjoor/persian-fonts-linux.git
 
 ./farsifonts.sh
 ```
