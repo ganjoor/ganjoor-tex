@@ -1,4 +1,4 @@
-# [Ganoor-TeX](manual.md)
+## [Ganoor-TeX](manual.md)
 
 [![مولوی](gif/moulavi.gif)](pdf/moulavi) |[![شبستری](gif/shabestari.gif)](pdf/shabestari) |[![خیام](gif/khayyam.gif)](pdf/khayyam) | [![حافظ](gif/hafez.gif)](pdf/hafez)
 ---|---|---|---
