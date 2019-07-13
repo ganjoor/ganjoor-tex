@@ -2,4 +2,6 @@
 ---|---|---|---
 [مولوی](pdf/moulavi)|[شبستری](pdf/shabestari)|[خیام](pdf/khayyam)|[حافظ](pdf/hafez)
 
-[Ganoor TeX](manual.md)
+
+
+[Ganoor-TeX](manual.md)
