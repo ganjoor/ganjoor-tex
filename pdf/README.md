@@ -1,2 +1,3 @@
-![مولوی](../gif/moulavi.gif) [مولوی](./moulavi)
+![مولوی](../gif/moulavi.gif) 
+[مولوی](./moulavi)
 
