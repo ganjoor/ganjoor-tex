@@ -19,14 +19,18 @@ class PoemParser(HTMLParser):
                 self.divclass = attr[1]
 
     def handle_endtag(self, tag):
+        if len(self.tags)>=2 and self.tags[-1] == "p" and self.tags[-2] == "div":
+            if self.divclass == "m1":
+                self.out.write('\n')
+            if self.divclass == "m2":
+                self.out.write('\n\n')
+
         self.tags.pop()
 
     def handle_data(self, data):
         if len(self.tags)>=2 and self.tags[-1] == "p" and self.tags[-2] == "div":
-            if self.divclass == "m1":
-                self.out.write(data+'\n')
-            if self.divclass == "m2":
-                self.out.write(data+'\n\n')
+            if self.divclass == "m1" or self.divclass == "m2":
+                self.out.write(data)
 
 class ContentTableParser(HTMLParser):
     def __init__(self, outpath):
