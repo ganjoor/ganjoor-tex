@@ -38,6 +38,8 @@ class ContentTableParser(HTMLParser):
         self.tags = []
         self.url = ""
         self.path = outpath
+        self.outname = ""
+        self.urlset = False
     def handle_starttag(self, tag, attrs):
         self.tags.append(tag)
         for attr in attrs:
@@ -45,25 +47,32 @@ class ContentTableParser(HTMLParser):
                 self.url = attr[1]
 
     def handle_endtag(self, tag):
+        if len(self.tags)>=1 and self.tags[-1] == "p" and self.urlset == True:
+            self.writefile()
+            self.urlset = False
+
         self.tags.pop()
 
     def handle_data(self, data):
+        if len(self.tags)>=1 and self.tags[-1] == "p" and self.urlset == True:
+            self.title = self.title + data
+
         if len(self.tags)>=2 and self.tags[-1] == "a" and self.tags[-2] == "p" and self.url[0:4]=="http":
             
             urllist = self.url.split("/")
             urllist = list(filter(None, urllist))
-            outname = urllist[len(urllist)-1]
-            if (len(outname)==3):
-                outname = outname[0:2] + "00" + outname[2:3]
-            if (len(outname)==4):
-                outname = outname[0:2] + "0" + outname[2:4]
+            self.outname = urllist[len(urllist)-1]
+            if (len(self.outname)==3):
+                self.outname = self.outname[0:2] + "00" + self.outname[2:3]
+            if (len(self.outname)==4):
+                self.outname = self.outname[0:2] + "0" + self.outname[2:4]
+            self.title = data
+            self.urlset = True
 
-            self.writefile(data, outname)
-
-    def writefile(self, title, outname):
-        outf = open(self.path+"/"+outname+".txt", "w")
-        outf.write(title+'\n\n')
-        print(title)
+    def writefile(self):
+        outf = open(self.path+"/"+self.outname+".txt", "w")
+        outf.write(self.title+'\n\n')
+        print(self.title)
         outcontent = urllib.request.urlopen(self.url).read().decode("utf8")
 
         parser = PoemParser(outf)
