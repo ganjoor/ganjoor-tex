@@ -9,6 +9,6 @@
 ---|---|---
 |[مولوی](pdf/moulavi) | [شبستری](pdf/shabestari) | [سنایی](pdf/sanaee)
 
-[![عطار](gif/attar.gif)](pdf/attar)
----
-[عطار](pdf/attar)
+[![عطار](gif/attar.gif)](pdf/attar)|
+---|
+[عطار](pdf/attar)|
