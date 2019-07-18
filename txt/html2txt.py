@@ -6,6 +6,8 @@ import urllib.request
 from html.parser import HTMLParser
 from html.entities import name2codepoint
 
+naming = "{:04d}"
+
 class PoemParser(HTMLParser):
     def __init__(self, outf):
         super(PoemParser, self).__init__()
@@ -62,10 +64,8 @@ class ContentTableParser(HTMLParser):
             urllist = self.url.split("/")
             urllist = list(filter(None, urllist))
             self.outname = urllist[len(urllist)-1]
-            if (len(self.outname)==3):
-                self.outname = self.outname[0:2] + "00" + self.outname[2:3]
-            if (len(self.outname)==4):
-                self.outname = self.outname[0:2] + "0" + self.outname[2:4]
+            self.outname = self.outname[2:len(self.outname)]
+            self.outname = naming.format(int(self.outname))
             self.title = data
             self.urlset = True
 
