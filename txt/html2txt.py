@@ -6,7 +6,7 @@ import urllib.request
 from html.parser import HTMLParser
 from html.entities import name2codepoint
 
-naming = "{:04d}"
+naming = "{:03d}"
 
 class PoemParser(HTMLParser):
     def __init__(self, outf):
