@@ -1,4 +1,4 @@
-### [Ganoor-TeX](manual.md)
+### [Ganjoor-TeX](manual.md)
 
 [![خیام](gif/khayyam.gif)](pdf/khayyam) | [![حافظ](gif/hafez.gif)](pdf/hafez) | [![ابوسعید](gif/abusaeed.gif)](pdf/abusaeed)
 ---|---|---
