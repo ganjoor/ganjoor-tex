@@ -11,5 +11,5 @@
 
 
 [![شیخ بهایی](gif/bahaee.gif)](pdf/bahaee) | [![حافظ](gif/hafez.gif)](pdf/hafez) | [![شبستری](gif/shabestari.gif)](pdf/shabestari)  
----|---
+---|---|---
 [شیخ بهایی](pdf/bahaee) | [حافظ](pdf/hafez) | [شبستری](pdf/shabestari)
