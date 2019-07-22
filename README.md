@@ -1,6 +1,6 @@
 ### [Ganjoor-TeX](manual.md)
 
-[![حافظ](gif/hafez.gif)](pdf/hafez) | [![باباطاهر](gif/babatahe.gif)](pdf/babataher) | [![ابوسعید](gif/abusaeed.gif)](pdf/abusaeed)
+[![حافظ](gif/hafez.gif)](pdf/hafez) | [![باباطاهر](gif/babataher.gif)](pdf/babataher) | [![ابوسعید](gif/abusaeed.gif)](pdf/abusaeed)
 ---|---|---
 [حافظ](pdf/hafez) | [باباطاهر](pdf/babataher) | [ابوسعید](pdf/abusaeed)
 
