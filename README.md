@@ -1,14 +1,14 @@
 ### [Ganjoor-TeX](manual.md)
 
-[![خیام](gif/khayyam.gif)](pdf/khayyam) | [![حافظ](gif/hafez.gif)](pdf/hafez) | [![ابوسعید](gif/abusaeed.gif)](pdf/abusaeed)
+[![حافظ](gif/hafez.gif)](pdf/hafez) | [![باباطاهر](gif/babataher.gif)](pdf/babataher) | [![ابوسعید](gif/abusaeed.gif)](pdf/abusaeed)
 ---|---|---
-[خیام](pdf/khayyam) | [حافظ](pdf/hafez) | [ابوسعید](pdf/abusaeed)
+[حافظ](pdf/hafez) | [باباطاهر](pdf/babataher) | [ابوسعید](pdf/abusaeed)
 
 
- [![مولوی](gif/moulavi.gif)](pdf/moulavi) | [![شبستری](gif/shabestari.gif)](pdf/shabestari) | [![سنایی](gif/sanaee.gif)](pdf/sanaee) 
+[![شبستری](gif/shabestari.gif)](pdf/shabestari) | [![سنایی](gif/sanaee.gif)](pdf/sanaee) | [![خیام](gif/khayyam.gif)](pdf/khayyam) 
 ---|---|---
-|[مولوی](pdf/moulavi) | [شبستری](pdf/shabestari) | [سنایی](pdf/sanaee)
+[شبستری](pdf/shabestari) | [سنایی](pdf/sanaee) | [خیام](pdf/khayyam)
 
-[![عطار](gif/attar.gif)](pdf/attar)|
----|
-[عطار](pdf/attar)|
+[![عطار](gif/attar.gif)](pdf/attar) | [![مولوی](gif/moulavi.gif)](pdf/moulavi) 
+---|---
+[عطار](pdf/attar) | [مولوی](pdf/moulavi)
