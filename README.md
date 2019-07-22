@@ -11,5 +11,5 @@
 
 
 [![عطار](gif/attar.gif)](pdf/attar) | [![مولوی](gif/moulavi.gif)](pdf/moulavi) | [![شبستری](gif/shabestari.gif)](pdf/shabestari)  
----|---
+---|---|---
 [عطار](pdf/attar) | [مولوی](pdf/moulavi) | [شبستری](pdf/shabestari) 
