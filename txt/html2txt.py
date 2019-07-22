@@ -60,12 +60,23 @@ class ContentTableParser(HTMLParser):
             self.title = self.title + data
 
         if len(self.tags)>=2 and self.tags[-1] == "a" and self.tags[-2] == "p" and self.url[0:4]=="http":
-            
+           
             urllist = self.url.split("/")
             urllist = list(filter(None, urllist))
+            if len(urllist) < 3 :
+                return
             self.outname = urllist[len(urllist)-1]
+            if len(self.outname) < 3:
+                return
             self.outname = self.outname[2:len(self.outname)]
-            self.outname = naming.format(int(self.outname))
+            num = 0
+            
+            try:
+                num = int(self.outname)
+            except ValueError:
+                return
+
+            self.outname = naming.format(num)
             self.title = data
             self.urlset = True
 
