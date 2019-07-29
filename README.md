@@ -10,6 +10,6 @@
  [سعدی](pdf/saadi) | [مولوی](pdf/moulavi) | [عطار](pdf/attar) | [باباافضل](pdf/babaafzal)
 
 
-[![شیخ بهایی](gif/bahaee.gif)](pdf/bahaee) | [![حافظ](gif/hafez.gif)](pdf/hafez) | [![شبستری](gif/shabestari.gif)](pdf/shabestari)  
----|---|---
-[شیخ بهایی](pdf/bahaee) | [حافظ](pdf/hafez) | [شبستری](pdf/shabestari)
+[![شیخ بهایی](gif/bahaee.gif)](pdf/bahaee) | [![حافظ](gif/hafez.gif)](pdf/hafez) | [![شبستری](gif/shabestari.gif)](pdf/shabestari) | [![عراقی](gif/eraghi.gif)](pdf/eraghi)  
+---|---|---|---
+[شیخ بهایی](pdf/bahaee) | [حافظ](pdf/hafez) | [شبستری](pdf/shabestari) | [عراقی](pdf/eraghi) 
