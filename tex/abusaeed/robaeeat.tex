@@ -1,6 +1,7 @@
 \documentclass[14pt,b5paper]{article}
 \usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
 \setlength{\parskip}{1em}
 \usepackage{color,xcolor}
 \usepackage{xepersian}
@@ -14,8 +15,9 @@
 \author{ }
 \date{ }
 \maketitle
-\newpage
-\tableofcontents
+\thispagestyle{empty}
+\clearpage
+\setcounter{page}{1}
 \newpage
 \input{robaeeat/sh001}
 \newpage
@@ -1465,4 +1467,5 @@
 \newpage
 \input{robaeeat/sh724}
 \newpage
+\tableofcontents
 \end{document}
