@@ -52,6 +52,7 @@ texf.write("\\documentclass[14pt,b5paper]{article}\n")
 
 texf.write("\\usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}\n")
 texf.write("\\usepackage{longtable}\n")
+texf.write("\\usepackage[hidelinks]{hyperref}\n")
 texf.write("\\setlength{\parskip}{1em}\n")
 texf.write("\\usepackage{color,xcolor}\n")   
 texf.write("\\usepackage{xepersian}\n")
@@ -66,8 +67,9 @@ texf.write("\\title{\Huge }\n")
 texf.write("\\author{ }\n")
 texf.write("\\date{ }\n")
 texf.write("\\maketitle\n")
-texf.write("\\newpage\n")
-texf.write("\\tableofcontents\n")
+texf.write("\\thispagestyle{empty}\n")
+texf.write("\\clearpage\n")
+texf.write("\\setcounter{page}{1}\n")
 texf.write("\\newpage\n")
 
 for fname in sorted(files):
@@ -75,6 +77,7 @@ for fname in sorted(files):
     texf.write("\\input{"+texpathlist[len(texpathlist)-1]+'/'+fname.split('.')[0]+"}\n")
     texf.write("\\newpage\n")
 
+texf.write("\\tableofcontents\n")
 texf.write("\\end{document}\n")
 
 texf.close()
