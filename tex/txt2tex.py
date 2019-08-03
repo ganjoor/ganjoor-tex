@@ -68,16 +68,18 @@ texf.write("\\author{ }\n")
 texf.write("\\date{ }\n")
 texf.write("\\maketitle\n")
 texf.write("\\thispagestyle{empty}\n")
-texf.write("\\clearpage\n")
-texf.write("\\setcounter{page}{1}\n")
 texf.write("\\newpage\n")
+texf.write("\\pagestyle{empty}\n")
+texf.write("\\tableofcontents\n")
+texf.write("\\newpage\n")
+texf.write("\\pagestyle{plain}\n")
+texf.write("\\setcounter{page}{1}\n")
 
 for fname in sorted(files):
     writefile(sys.argv[1], texpath, fname)
     texf.write("\\input{"+texpathlist[len(texpathlist)-1]+'/'+fname.split('.')[0]+"}\n")
     texf.write("\\newpage\n")
 
-texf.write("\\tableofcontents\n")
 texf.write("\\end{document}\n")
 
 texf.close()
