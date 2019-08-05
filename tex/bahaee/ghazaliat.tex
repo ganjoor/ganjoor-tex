@@ -1,6 +1,7 @@
-\documentclass[14pt,b5paper]{article}
-\usepackage[left=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\documentclass[14pt,b5paper]{book}
+\usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
 \setlength{\parskip}{1em}
 \usepackage{color,xcolor}
 \usepackage{xepersian}
@@ -10,13 +11,15 @@
 \setlatintextfont[Scale=1]{TeX Gyre Termes}
 \renewcommand{\arraystretch}{3.5}
 \begin{document}
-\title{\Huge غزلیات شیخ بهایی}
-\author{ }
-\date{ }
-\maketitle
-\newpage
-\tableofcontents
-\newpage
+\input{ghazaliat-title}
+\pagestyle{empty} {
+ \renewcommand{\thispagestyle}[1]{}
+ \maketitle
+ \tableofcontents
+}
+\clearpage
+\pagestyle{plain}
+\setcounter{page}{1}
 \input{ghazaliat/001}
 \newpage
 \input{ghazaliat/002}
