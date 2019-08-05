@@ -5,3 +5,5 @@ dobeyti.pdf
 *.aux
 *.toc
 *.out
+*.maf
+*.mtc*
