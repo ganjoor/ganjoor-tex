@@ -3,6 +3,8 @@
 import sys
 import os
 
+chapter = False
+
 def writefile(textpath, texpath, fname):
     name = fname.split(".")[0]
     inf = open(textpath+'/'+fname)
@@ -49,36 +51,43 @@ texf = open(texpath+'.tex', 'w')
 texpathlist = texpath.split('/')
 pname = texpathlist[len(texpathlist)-1]
 
-texf.write("\\documentclass[14pt,b5paper]{book}\n")
+if chapter == False:
+    texf.write("\\documentclass[14pt,b5paper]{book}\n")
 
-texf.write("\\usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}\n")
-texf.write("\\usepackage{longtable}\n")
-texf.write("\\usepackage[hidelinks]{hyperref}\n")
-texf.write("\\setlength{\parskip}{1em}\n")
-texf.write("\\usepackage{color,xcolor}\n")   
-texf.write("\\usepackage{xepersian}\n")
-texf.write("\\usepackage{fontspec}\n")
-texf.write("\\usepackage{nameref}\n")
-texf.write("\\settextfont[Scale=1.5]{IranNastaliq}\n")
-texf.write("\\setlatintextfont[Scale=1]{TeX Gyre Termes}\n")
-texf.write("\\renewcommand{\\arraystretch}{3.5}\n")
+    texf.write("\\usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}\n")
+    texf.write("\\usepackage{longtable}\n")
+    texf.write("\\usepackage[hidelinks]{hyperref}\n")
+    texf.write("\\setlength{\parskip}{1em}\n")
+    texf.write("\\usepackage{color,xcolor}\n")   
+    texf.write("\\usepackage{xepersian}\n")
+    texf.write("\\usepackage{fontspec}\n")
+    texf.write("\\usepackage{nameref}\n")
+    texf.write("\\settextfont[Scale=1.5]{IranNastaliq}\n")
+    texf.write("\\setlatintextfont[Scale=1]{TeX Gyre Termes}\n")
+    texf.write("\\renewcommand{\\arraystretch}{3.5}\n")
 
-texf.write("\\begin{document}\n")
+    texf.write("\\begin{document}\n")
+
 texf.write("\\input{"+pname+"-title}\n")
-texf.write("\\pagestyle{empty} {\n")
-texf.write(" \\renewcommand{\\thispagestyle}[1]{}\n")
-texf.write(" \\maketitle\n")
-texf.write(" \\tableofcontents\n")
-texf.write("}\n")
-texf.write("\\clearpage\n")
-texf.write("\\pagestyle{plain}\n")
-texf.write("\\setcounter{page}{1}\n")
+
+if chapter == False:
+    texf.write("\\pagestyle{empty} {\n")
+    texf.write(" \\renewcommand{\\thispagestyle}[1]{}\n")
+    texf.write(" \\maketitle\n")
+    texf.write(" \\tableofcontents\n")
+    texf.write("}\n")
+    texf.write("\\clearpage\n")
+    texf.write("\\pagestyle{plain}\n")
+    texf.write("\\setcounter{page}{1}\n")
+else:
+    texf.write("\\newpage\n")
 
 for fname in sorted(files):
     writefile(sys.argv[1], texpath, fname)
     texf.write("\\input{"+pname+'/'+fname.split('.')[0]+"}\n")
     texf.write("\\newpage\n")
 
-texf.write("\\end{document}\n")
+if chapter == False:
+    texf.write("\\end{document}\n")
 
 texf.close()
