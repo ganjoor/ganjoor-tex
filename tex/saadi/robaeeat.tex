@@ -1,6 +1,8 @@
-\documentclass[14pt,b5paper]{article}
-\usepackage[left=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\documentclass[14pt,b5paper]{book}
+\usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{minitoc}
 \usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
 \setlength{\parskip}{1em}
 \usepackage{color,xcolor}
 \usepackage{xepersian}
@@ -9,14 +11,18 @@
 \settextfont[Scale=1.5]{IranNastaliq}
 \setlatintextfont[Scale=1]{TeX Gyre Termes}
 \renewcommand{\arraystretch}{3.5}
+\setcounter{tocdepth}{1}
 \begin{document}
-\title{\Huge رباعیات سعدی شیرازی}
-\author{ }
-\date{ }
-\maketitle
-\newpage
-\tableofcontents
-\newpage
+\input{robaeeat-title}
+\pagestyle{empty} {
+ \renewcommand{\thispagestyle}[1]{}
+ \maketitle
+ \dominitoc
+ \tableofcontents
+}
+\clearpage
+\pagestyle{plain}
+\setcounter{page}{1}
 \input{robaeeat/001}
 \newpage
 \input{robaeeat/002}
