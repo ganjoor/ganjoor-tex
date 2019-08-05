@@ -14,11 +14,12 @@
 \title{\Huge رباعیات ابوسعید ابوالخیر}
 \author{ }
 \date{ }
-\maketitle
-\thispagestyle{empty}
-\pagestyle{empty}
-\tableofcontents
-\newpage
+\pagestyle{empty} {
+ \renewcommand{\thispagestyle}[1]{}
+ \maketitle
+ \tableofcontents
+}
+\clearpage
 \pagestyle{plain}
 \setcounter{page}{1}
 \input{robaeeat/sh001}
