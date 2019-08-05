@@ -47,6 +47,7 @@ if texpath[len(texpath)-1] == '/':
 
 texf = open(texpath+'.tex', 'w')
 texpathlist = texpath.split('/')
+pname = texpathlist[len(texpathlist)-1]
 
 texf.write("\\documentclass[14pt,b5paper]{book}\n")
 
@@ -63,9 +64,7 @@ texf.write("\\setlatintextfont[Scale=1]{TeX Gyre Termes}\n")
 texf.write("\\renewcommand{\\arraystretch}{3.5}\n")
 
 texf.write("\\begin{document}\n")
-texf.write("\\title{\Huge }\n")
-texf.write("\\author{ }\n")
-texf.write("\\date{ }\n")
+texf.write("\\input{"+pname+"-title}\n")
 texf.write("\\pagestyle{empty} {\n")
 texf.write(" \\renewcommand{\\thispagestyle}[1]{}\n")
 texf.write(" \\maketitle\n")
@@ -77,7 +76,7 @@ texf.write("\\setcounter{page}{1}\n")
 
 for fname in sorted(files):
     writefile(sys.argv[1], texpath, fname)
-    texf.write("\\input{"+texpathlist[len(texpathlist)-1]+'/'+fname.split('.')[0]+"}\n")
+    texf.write("\\input{"+pname+'/'+fname.split('.')[0]+"}\n")
     texf.write("\\newpage\n")
 
 texf.write("\\end{document}\n")
