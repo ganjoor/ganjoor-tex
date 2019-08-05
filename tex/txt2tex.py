@@ -55,6 +55,7 @@ if chapter == False:
     texf.write("\\documentclass[14pt,b5paper]{book}\n")
 
     texf.write("\\usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}\n")
+    texf.write("\\usepackage{minitoc}\n")
     texf.write("\\usepackage{longtable}\n")
     texf.write("\\usepackage[hidelinks]{hyperref}\n")
     texf.write("\\setlength{\parskip}{1em}\n")
@@ -65,7 +66,8 @@ if chapter == False:
     texf.write("\\settextfont[Scale=1.5]{IranNastaliq}\n")
     texf.write("\\setlatintextfont[Scale=1]{TeX Gyre Termes}\n")
     texf.write("\\renewcommand{\\arraystretch}{3.5}\n")
-
+    texf.write("\\setcounter{tocdepth}{1}\n")
+    
     texf.write("\\begin{document}\n")
 
 texf.write("\\input{"+pname+"-title}\n")
@@ -74,6 +76,7 @@ if chapter == False:
     texf.write("\\pagestyle{empty} {\n")
     texf.write(" \\renewcommand{\\thispagestyle}[1]{}\n")
     texf.write(" \\maketitle\n")
+    texf.write(" \\dominitoc\n")
     texf.write(" \\tableofcontents\n")
     texf.write("}\n")
     texf.write("\\clearpage\n")

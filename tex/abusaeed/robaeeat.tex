@@ -1,5 +1,6 @@
 \documentclass[14pt,b5paper]{book}
 \usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{minitoc}
 \usepackage{longtable}
 \usepackage[hidelinks]{hyperref}
 \setlength{\parskip}{1em}
@@ -10,11 +11,13 @@
 \settextfont[Scale=1.5]{IranNastaliq}
 \setlatintextfont[Scale=1]{TeX Gyre Termes}
 \renewcommand{\arraystretch}{3.5}
+\setcounter{tocdepth}{1}
 \begin{document}
 \input{robaeeat-title}
 \pagestyle{empty} {
  \renewcommand{\thispagestyle}[1]{}
  \maketitle
+ \dominitoc
  \tableofcontents
 }
 \clearpage
