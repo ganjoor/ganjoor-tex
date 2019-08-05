@@ -1,6 +1,7 @@
-\documentclass[14pt,b5paper]{article}
+\documentclass[14pt,b5paper]{book}
 \usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
 \setlength{\parskip}{1em}
 \usepackage{color,xcolor}
 \usepackage{xepersian}
@@ -13,10 +14,14 @@
 \title{\Huge غزلیات عطار نیشابوری}
 \author{ }
 \date{ }
-\maketitle
-\newpage
-\tableofcontents
-\newpage
+\pagestyle{empty} {
+ \renewcommand{\thispagestyle}[1]{}
+ \maketitle
+ \tableofcontents
+}
+\clearpage
+\pagestyle{plain}
+\setcounter{page}{1}
 \input{ghazaliat/001}
 \newpage
 \input{ghazaliat/002}
