@@ -48,7 +48,7 @@ if texpath[len(texpath)-1] == '/':
 texf = open(texpath+'.tex', 'w')
 texpathlist = texpath.split('/')
 
-texf.write("\\documentclass[14pt,b5paper]{article}\n")
+texf.write("\\documentclass[14pt,b5paper]{book}\n")
 
 texf.write("\\usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}\n")
 texf.write("\\usepackage{longtable}\n")
@@ -68,7 +68,6 @@ texf.write("\\author{ }\n")
 texf.write("\\date{ }\n")
 texf.write("\\maketitle\n")
 texf.write("\\thispagestyle{empty}\n")
-texf.write("\\newpage\n")
 texf.write("\\pagestyle{empty}\n")
 texf.write("\\tableofcontents\n")
 texf.write("\\newpage\n")
