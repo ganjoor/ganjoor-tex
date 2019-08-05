@@ -1,3 +1,3 @@
 # شیخ محمود شبستری
 
-### [گلشن راز](./golshaneraz.pdf)
+### [گلشن راز](./shabestari-golshaneraz.pdf)
