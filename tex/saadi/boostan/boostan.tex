@@ -1,0 +1,49 @@
+\documentclass[14pt,b5paper]{book}
+\usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{minitoc}
+\usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parskip}{1em}
+\usepackage{color,xcolor}
+\usepackage{xepersian}
+\usepackage{fontspec}
+\usepackage{nameref}
+\settextfont[Scale=1.5]{IranNastaliq}
+\setlatintextfont[Scale=1]{TeX Gyre Termes}
+\renewcommand{\arraystretch}{3.5}
+\setcounter{tocdepth}{0}
+\setcounter{chapter}{-1}
+\begin{document}
+\input{boostan-title}
+\pagestyle{empty} {
+ \renewcommand{\thispagestyle}[1]{}
+ \maketitle
+ \dominitoc
+ \tableofcontents
+}
+\clearpage
+\pagestyle{plain}
+\setcounter{page}{1}
+\input{bab00}
+\newpage
+\input{bab01}
+\newpage
+\input{bab02}
+\newpage
+\input{bab03}
+\newpage
+\input{bab04}
+\newpage
+\input{bab05}
+\newpage
+\input{bab06}
+\newpage
+\input{bab07}
+\newpage
+\input{bab08}
+\newpage
+\input{bab09}
+\newpage
+\input{bab10}
+\newpage
+\end{document}
