@@ -6,3 +6,6 @@
 ### [دفتر چهارم](./moulavi4-khavar.pdf)
 ### [دفتر پنجم](./moulavi5-khavar.pdf)
 ### [دفتر ششم](./moulavi6-khavar.pdf)
+### [دفتر هفتم](./moulavi7-khavar.pdf)
+### [کشف الابیات](./moulavi-kashf-alabyat.pdf)
+### [فرهنگ لغات](./moulavi-farhang-loghat.pdf)
