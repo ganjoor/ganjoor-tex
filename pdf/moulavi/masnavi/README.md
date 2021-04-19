@@ -1,4 +1,4 @@
-# مثنوی معنوی
+# مثنوی معنوی مولانا جلال الدین محمد بلخی
 
 ### [دفتر اول](./moulavi-masnavi-daftar1.pdf)
 ### [دفتر دوم](./moulavi-masnavi-daftar2.pdf)
