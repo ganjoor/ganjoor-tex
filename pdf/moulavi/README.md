@@ -5,3 +5,5 @@
 ### [گلشن مثنوی معنوی](./golshan)
 ### [گلچین مثنوی معنوی](./golchin)
 ### [مثنوی معنوی کلاله خاور](./khavar)
+### [مثنوی معنوی رینولد نیکلسون](./nicholson/masnavi-nicholson.pdf)
+### [مقالات شمس تبریزی](./maghalat/shams-maghalat.pdf)
