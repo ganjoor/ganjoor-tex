@@ -2,8 +2,7 @@
 
 ### [مثنوی معنوی](./masnavi)
 ### [دیوان شمس](./shams)
-### [گلشن مثنوی معنوی](./golshan)
-### [گلچین مثنوی معنوی](./golchin)
+### [گلچین مثنوی معنوی](./masnavi-golchin)
 ### [مثنوی معنوی کلاله خاور](./khavar)
 ### [مثنوی معنوی رینولد نیکلسون](./nicholson/masnavi-nicholson.pdf)
 ### [مقالات شمس تبریزی](./maghalat/shams-maghalat.pdf)
